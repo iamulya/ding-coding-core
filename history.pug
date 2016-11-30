@@ -1,0 +1,20 @@
+
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+  body
+    h1 Pug - node template engine
+    - console.log(viewConf)
+    - console.log(dynamicHtmlPiece)
+    #container.col
+      if youAreUsingPug
+        p You are amazing
+      else
+        p Get on it!
+      ul
+        each val, key in dynamicHtmlPiece
+          li(id=key)!=val
+      p.
+        Pug is a terse and simple templating language with a
+        strong focus on performance and powerful features.
